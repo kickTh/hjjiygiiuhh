@@ -1,0 +1,16 @@
+_G.Disabled = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(30,30,30)
+v.Character.HumanoidRootPart.Transparency = 0.99
+v.Character.HumanoidRootPart.CanCollide = true
+v.Character.HumanoidRootPart.Material = "Neon"
+end)
+end
+end
+end
+end)
+
