@@ -1,0 +1,12 @@
+_G.AutoEquipA = true
+
+while _G.AutoEquip do wait()
+			local ToolName = "Knife"
+			local tool = game.Players.LocalPlayer.Backpack:FindFirstChild(ToolName)
+          wait(.5)
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+end
+
+while _G.AutoEquipA do wait()
+_G.AutoEquip()
+end
